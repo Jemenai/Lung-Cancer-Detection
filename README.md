@@ -1,350 +1,180 @@
-Lung Cancer Risk Prediction
+---
 
-![Anatomy of the Lungs](licensed-image.jpg)
-This project aims to develop a robust machine learning system to predict the risk of lung cancer in patients based on a range of demographic, lifestyle, and medical history attributes. The ultimate goal is to create an accessible tool for early-risk assessment, deployed as both a web and mobile application.
+# 🫁 Lung Cancer Prediction System
 
-This project is undertaken as part of the DataLab Analytics Final Project.
+This project provides a **deep data insight pipeline** and a **Streamlit-powered prediction application** for lung cancer risk assessment. It combines exploratory data analysis, feature engineering, multiple machine learning/deep learning models, and deployment of trained models into a user-friendly web interface.
 
-📋 Table of Contents
-Project Overview
+---
 
-Problem Statement
+## 📑 Project Structure
 
-Dataset Description
+* **`Ifeoma Okonma_Final Project.ipynb`**
+  Jupyter Notebook containing:
 
-Project Workflow
+  * Data preprocessing & feature engineering.
+  * Exploratory data analysis (EDA) for identifying correlations and risk factors.
+  * Training of multiple ML/DL algorithms.
+  * Saving trained models in different formats (`.keras`, `.h5`, `.tflite`, `.joblib`).
 
-Models Implemented
+* **`streamlit_lung_cancer_predictor_app_app.py`**
+  Streamlit application for lung cancer prediction.
 
-Technologies & Libraries
+  * Uses `.keras` and `.joblib` models for live predictions.
+  * Provides user registration, login, and personalized prediction history.
+  * Includes an **admin panel** for managing global prediction records.
 
-Project Structure
+* **Model files**
 
-How to Use
+  * **Deep Learning Models (Keras)**: `best_lstm_model.keras`, `best_gru_model.keras`, `best_mha_model.keras`.
+  * **ML Models (Joblib)**: `xgboost_model.joblib`, `logistic_regression_model.joblib`, `random_forest_model.joblib`, `linear_regression_model.joblib`, `k_nearest_neighbors_model.joblib`.
+  * **Scaler**: `scaler.pkl` for preprocessing new inputs.
+  * **Additional formats**: `.h5` and `.tflite` versions (prepared for portability and embedded systems).
 
-Results & Performance
+---
 
-Future Work
+## 🎯 Why This Approach?
 
-License
+The assessment adopts a **multi-model ensemble approach** because:
 
-Contact
+1. **Deep Insights**:
 
-📝 Project Overview
-As a Data Scientist in a Health Tech Startup, I was tasked with training machine learning algorithms on a dataset of 5,000 patient records to develop a model that can identify patterns and correlations between risk factors and the likelihood of developing lung cancer. This repository contains the complete workflow, from data exploration and preprocessing to model training, evaluation, and preparation for deployment. The project culminates in a Streamlit web application and a React Native mobile app that leverage the best-performing model to provide probability-based predictions for new patients, enabling early intervention and personalized risk assessment.
+   * Extensive EDA was performed to capture key predictors of lung cancer (e.g., smoking, pollution exposure, family history).
+   * Feature interactions (e.g., `Smoking x Family History`) were engineered to uncover hidden risk patterns.
 
-🎯 Problem Statement
-The objective is to classify whether a patient is at risk of developing lung cancer based on 18 predictive features. This is a binary classification problem where the model will output a probability score indicating the risk level. The key challenge is to build a highly accurate and reliable model by exploring a diverse set of machine learning and deep learning algorithms.
+2. **Diverse Algorithms**:
 
-🗂️ Dataset Description
-The project utilizes a comprehensive dataset of 5,000 records, each containing 18 features that capture critical lung cancer risk factors.
+   * Classical ML models (Logistic Regression, Random Forest, XGBoost) provide explainability and fast inference.
+   * Deep Learning models (LSTM, GRU, Multi-Head Attention) capture non-linear dependencies and temporal-like interactions between features.
 
-Target Variable: PULMONARY_DISEASE - A binary indicator of the presence or risk of lung cancer.
+3. **Robust Deployment**:
 
-Features:
+   * Models saved in multiple formats (`keras`, `h5`, `tflite`, `joblib`) ensure compatibility with **cloud apps, edge devices, and production pipelines**.
+   * The Streamlit app integrates both classical and deep models for real-time predictions.
 
-Feature Name
+---
 
-Description
+## 🚀 Streamlit Application
 
-Relevance to Lung Cancer Risk
+### Features
 
-AGE
+* **User Authentication**: Register/login to access personal dashboard.
+* **Patient Questionnaire**: Input health indicators (e.g., age, smoking, oxygen saturation, family history).
+* **Multi-Model Predictions**:
 
-Age of the patient (in years).
+  * Run predictions with **all models** or a **selected algorithm**.
+  * Display accuracy & F1-score benchmarks for transparency.
+  * Consensus voting when multiple models are selected.
+* **History Tracking**:
 
-Older age is a known risk factor.
+  * Users can view, expand, and delete their own past prediction records.
+  * Predictions are timestamped and saved with input features.
+* **Profile Management**: Update personal details such as age.
+* **Admin Dashboard**: Manage all users’ prediction history.
 
-GENDER
+---
 
-Gender of the patient.
+## 🛠️ How to Run Locally
 
-Incidence rates can differ by gender.
+### 1. Clone the Repository
 
-SMOKING
+```bash
+git clone <repo_url>
+cd <repo_folder>
+```
 
-Smoking status of the patient.
+### 2. Install Dependencies
 
-Smoking is the leading cause of lung cancer.
+It is recommended to use a virtual environment.
 
-ALCOHOL
-
-Alcohol consumption history.
-
-Heavy alcohol use can increase risk.
-
-FAMILY_HISTORY
-
-Family history of lung cancer.
-
-Genetic predisposition is a known risk factor.
-
-...
-
-(Other features as listed in the dataset)
-
-(Relevance of other features)
-
-(You can complete the table above with all 18 features from your dataset description file.)
-
-⚙️ Project Workflow
-The project is structured into the following key phases:
-
-Data Preparation & Preprocessing:
-
-Loading the dataset and performing initial inspections.
-
-Checking for and handling inconsistencies like incorrect data types, duplicates, and outliers.
-
-Encoding categorical features into a numerical format suitable for machine learning models.
-
-Scaling numerical features to a standard range to ensure fair contribution from all variables.
-
-Splitting the data into training (80%) and testing (20%) sets to prevent data leakage.
-
-Exploratory Data Analysis (EDA):
-
-Conducting univariate and bivariate analysis to understand feature distributions and relationships.
-
-Using visualizations like histograms, box plots, and correlation heatmaps to uncover patterns and insights.
-
-Model Building & Training:
-
-Implementing and training nine different classification algorithms to comprehensively explore modeling techniques.
-
-The models range from traditional machine learning classifiers to more complex deep learning architectures.
-
-Model Evaluation:
-
-Assessing the performance of each model on the unseen test set using standard classification metrics:
-
-Accuracy: Overall correctness of predictions.
-
-Precision: Ability of the model to identify only relevant instances.
-
-Recall (Sensitivity): Ability of the model to find all relevant instances.
-
-F1-Score: The harmonic mean of Precision and Recall.
-
-ROC-AUC Score: Measure of the model's ability to distinguish between classes.
-
-Model Selection & Deployment:
-
-Comparing the evaluation metrics to select the single best-performing model.
-
-Saving the trained model (.pkl or .joblib file) for future use.
-
-Developing a user-friendly Streamlit web application to serve the model.
-
-Building a simple React Native mobile application that consumes the model's prediction API.
-
-🧠 Models Implemented
-A diverse range of algorithms was used to ensure a thorough and robust analysis.
-
-Machine Learning Models:
-Logistic Regression: A baseline linear model for binary classification.
-
-K-Nearest Neighbors (KNN): A non-parametric algorithm that classifies based on the majority class of its 'k' nearest neighbors.
-
-Random Forest: An ensemble method using multiple decision trees to improve prediction accuracy and control over-fitting.
-
-XGBoost (Extreme Gradient Boosting): A powerful and efficient gradient boosting framework known for its high performance.
-
-Linear Regression: While typically used for regression, it was explored to provide a complete analytical perspective. Its coefficients can offer insights but it's not suitable for the final classification task.
-
-Deep Learning Models:
-LSTM (Long Short-Term Memory): A type of Recurrent Neural Network (RNN) capable of learning long-term dependencies, often used in sequence data.
-
-BiLSTM (Bidirectional LSTM): An extension of LSTM that processes data in both forward and backward directions, capturing more context.
-
-GRU (Gated Recurrent Unit): A simpler variant of LSTM that often performs comparably with less computational overhead.
-
-Attention Model: Utilizes tf.keras.layers.MultiHeadAttention to allow the model to focus on the most relevant parts of the input data when making predictions.
-
-💻 Technologies & Libraries
-Language: Python 3.9
-
-Data Analysis & ML: Pandas, NumPy, Scikit-learn, XGBoost
-
-Deep Learning: TensorFlow, Keras
-
-Data Visualization: Matplotlib, Seaborn
-
-Web App: Streamlit
-
-Mobile App: React Native
-
-Environment: Jupyter Notebook, VS Code
-
-📁 Project Structure
-.
-├── data/
-│   └── lung_cancer_data.csv
-├── notebooks/
-│   └── Lung_Cancer_Risk_Prediction.ipynb
-├── models/
-│   └── best_model.joblib
-├── app/
-│   └── app.py
-├── mobile_app/
-│   ├── App.js
-│   └── ... (React Native project files)
-├── README.md
-└── requirements.txt
-
-🚀 How to Use
-To replicate this project on your local machine, follow these steps:
-
-Clone the repository:
-
-git clone [https://github.com/your-username/lung-cancer-prediction.git](https://github.com/your-username/lung-cancer-prediction.git)
-cd lung-cancer-prediction
-
-Create a virtual environment (recommended):
-
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-
-Install the required dependencies:
-
+```bash
 pip install -r requirements.txt
+```
 
-Launch the Jupyter Notebook:
+**Main dependencies**:
 
-jupyter notebook notebooks/Lung_Cancer_Risk_Prediction.ipynb
+* `streamlit`
+* `tensorflow`
+* `scikit-learn`
+* `xgboost`
+* `joblib`
+* `pandas`, `numpy`
 
-Run the Streamlit Web Application:
+### 3. Ensure Model & Data Files Exist
 
-streamlit run app/app.py
+Place the following in the project directory:
 
-📊 Results & Performance
-(This section is a template. You should fill it with your final results after running the notebook.)
+* Trained model files (`*.keras`, `*.joblib`, `scaler.pkl`)
+* Data directory: `app_data/` containing `users.json` and `history.json` (auto-created if missing).
 
-The performance of all nine models was evaluated on the test set. The results are summarized below:
+### 4. Run Streamlit App
 
-Model
+```bash
+streamlit run streamlit_lung_cancer_predictor_app_app.py
+```
 
-Accuracy
+### 5. Access in Browser
 
-Precision
+Default: [http://localhost:8501](http://localhost:8501)
 
-Recall
+---
 
-F1-Score
+## 📘 Application Usage
 
-ROC-AUC
+1. **Register/Login**
 
-Logistic Regression
+   * New users can register with email, name, and password.
+   * Existing users can log in.
 
--
+2. **Dashboard**
 
--
+   * Fill in the questionnaire.
+   * Choose **one model** or **All Models**.
+   * Click **Predict** → Results with model accuracies are displayed.
+   * Consensus prediction shown when multiple models are selected.
 
--
+3. **History**
 
--
+   * View all your past predictions.
+   * Expand to inspect details.
+   * Delete individual or all records.
 
--
+4. **Profile**
 
-K-Nearest Neighbors
+   * Update age or other personal information.
 
--
+5. **Admin Panel**
 
--
+   * Accessible only to **admin users**.
+   * View all prediction records in a table.
+   * Delete history by:
 
--
+     * All users
+     * Specific user
+     * Specific timestamp
 
--
+---
 
--
+## 🔑 Admin Access
 
-Random Forest
+* Admins are defined inside the app (`ADMIN_USERS` list in code).
+* Default admin:
 
--
+  ```
+  Email: admin@example.com
+  Password: (set during first registration with this email)
+  ```
+* Once registered with the above email, login and you’ll see the **Admin** tab in the sidebar.
 
--
+---
 
--
+## 📊 Example Workflow
 
--
+1. User registers → logs in.
+2. Completes questionnaire → selects `RandomForest`.
+3. Gets prediction: **Positive (Accuracy: 0.90)**.
+4. History is saved under their account.
+5. Admin logs in → checks all predictions → deletes one suspicious record.
 
--
+---
 
-XGBoost
-
--
-
--
-
--
-
--
-
--
-
-LSTM
-
--
-
--
-
--
-
--
-
--
-
-BiLSTM
-
--
-
--
-
--
-
--
-
--
-
-GRU
-
--
-
--
-
--
-
--
-
--
-
-Attention Model
-
--
-
--
-
--
-
--
-
--
-
-Conclusion: The [Your Best Model, e.g., XGBoost] model was selected as the best-performing model due to its superior balance of accuracy and F1-score. This model will be used for the final deployment.
-
-💡 Future Work
-Hyperparameter Tuning: Conduct a more extensive hyperparameter search (e.g., using GridSearch or Optuna) for the top models to further boost performance.
-
-Feature Engineering: Create new features from existing ones to potentially improve model accuracy.
-
-Model Interpretability: Use tools like SHAP or LIME to explain the predictions of the best model, providing more transparency.
-
-Expand Deployment: Deploy the model API on a cloud service (like AWS or GCP) to create a more scalable backend for the mobile application.
-
-📄 License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-📞 Contact
-Ifeoma Okonma - [Your Email] - [Your LinkedIn Profile URL]
-
-Project Link: https://github.com/your-username/lung-cancer-prediction
+Would you like me to **include a small “Quick Demo GIF section”** (with example code snippet for generating GIFs/screenshots) in the README, so people can visualize the Streamlit app steps directly?

@@ -1,0 +1,23 @@
+{
+  "user@user.com": {
+    "password": "user",
+    "name": "user",
+    "profile": {
+      "age": null
+    }
+  },
+  "admin@example.com": {
+    "password": "admin",
+    "name": "admin",
+    "profile": {
+      "age": null
+    }
+  },
+  "peter@email.com": {
+    "password": "peter",
+    "name": "Peter",
+    "profile": {
+      "age": null
+    }
+  }
+}

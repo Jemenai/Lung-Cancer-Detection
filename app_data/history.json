@@ -1,0 +1,341 @@
+[
+  {
+    "timestamp": "2025-09-11 23:22:04",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 0,
+      "BREATHING_ISSUE": 0,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 0,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 0,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 0,
+      "FAMILY_HISTORY": 0,
+      "IMMUNE_WEAKNESS": 0,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 0,
+      "AGE": 0
+    },
+    "predictions": {
+      "GRU": {
+        "class": 0,
+        "raw": 0.05137137323617935
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-11 23:28:14",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 0,
+      "BREATHING_ISSUE": 0,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 0,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 0,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 0,
+      "FAMILY_HISTORY": 0,
+      "IMMUNE_WEAKNESS": 0,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 0,
+      "AGE": 0
+    },
+    "predictions": {
+      "XGBoost": {
+        "class": 0,
+        "raw": 0.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-11 23:28:18",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 0,
+      "BREATHING_ISSUE": 0,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 0,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 0,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 0,
+      "FAMILY_HISTORY": 0,
+      "IMMUNE_WEAKNESS": 0,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 0,
+      "AGE": 0
+    },
+    "predictions": {
+      "LSTM": {
+        "class": 0,
+        "raw": 0.04139404743909836
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-11 23:28:22",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 0,
+      "BREATHING_ISSUE": 0,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 0,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 0,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 0,
+      "FAMILY_HISTORY": 0,
+      "IMMUNE_WEAKNESS": 0,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 0,
+      "AGE": 0
+    },
+    "predictions": {
+      "LinearRegression": {
+        "class": 0,
+        "raw": 0.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-11 23:28:26",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 0,
+      "BREATHING_ISSUE": 0,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 0,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 0,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 0,
+      "FAMILY_HISTORY": 0,
+      "IMMUNE_WEAKNESS": 0,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 0,
+      "AGE": 0
+    },
+    "predictions": {
+      "LogisticRegression": {
+        "class": 0,
+        "raw": 0.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-11 23:28:32",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 0,
+      "BREATHING_ISSUE": 0,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 0,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 0,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 0,
+      "FAMILY_HISTORY": 0,
+      "IMMUNE_WEAKNESS": 0,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 0,
+      "AGE": 0
+    },
+    "predictions": {
+      "RandomForest": {
+        "class": 0,
+        "raw": 0.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-11 23:28:36",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 0,
+      "BREATHING_ISSUE": 0,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 0,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 0,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 0,
+      "FAMILY_HISTORY": 0,
+      "IMMUNE_WEAKNESS": 0,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 0,
+      "AGE": 0
+    },
+    "predictions": {
+      "KNN": {
+        "class": 0,
+        "raw": 0.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-11 23:30:11",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 0,
+      "BREATHING_ISSUE": 0,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 0,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 0,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 0,
+      "FAMILY_HISTORY": 0,
+      "IMMUNE_WEAKNESS": 0,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 0,
+      "AGE": 0
+    },
+    "predictions": {
+      "MHA": {
+        "class": 0,
+        "raw": 9.123671436406244e-12
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-11 23:30:15",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 0,
+      "BREATHING_ISSUE": 0,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 0,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 0,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 0,
+      "FAMILY_HISTORY": 0,
+      "IMMUNE_WEAKNESS": 0,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 0,
+      "AGE": 0
+    },
+    "predictions": {
+      "XGBoost": {
+        "class": 0,
+        "raw": "[0]"
+      },
+      "LSTM": {
+        "class": 0,
+        "raw": "[0.04139405]"
+      },
+      "GRU": {
+        "class": 0,
+        "raw": "[0.05137137]"
+      },
+      "MHA": {
+        "class": 0,
+        "raw": "[9.1236714e-12]"
+      },
+      "LinearRegression": {
+        "class": 0,
+        "raw": "[0]"
+      },
+      "LogisticRegression": {
+        "class": 0,
+        "raw": "[0]"
+      },
+      "RandomForest": {
+        "class": 0,
+        "raw": "[0]"
+      },
+      "KNN": {
+        "class": 0,
+        "raw": "[0]"
+      },
+      "Consensus": {
+        "class": 0,
+        "raw": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "accuracy": 0.85
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-12 00:32:47",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 1,
+      "BREATHING_ISSUE": 1,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 1,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 58,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 1,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 1,
+      "FAMILY_HISTORY": 1,
+      "IMMUNE_WEAKNESS": 1,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 88,
+      "AGE": 67
+    },
+    "predictions": {
+      "LSTM": {
+        "class": 0,
+        "raw": 0.3113422393798828
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-12 00:36:35",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 1,
+      "BREATHING_ISSUE": 1,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 1,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 58,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 1,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 1,
+      "FAMILY_HISTORY": 1,
+      "IMMUNE_WEAKNESS": 1,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 88,
+      "AGE": 67
+    },
+    "predictions": {
+      "LinearRegression": {
+        "class": 1,
+        "raw": 1.0
+      }
+    }
+  }
+]
