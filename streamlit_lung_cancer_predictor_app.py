@@ -14,17 +14,17 @@ from datetime import datetime
 DATA_DIR = "app_data"
 USERS_FILE = os.path.join(DATA_DIR, "users.json")
 HISTORY_FILE = os.path.join(DATA_DIR, "history.json")
-SCALER_FILE = "scaler.pkl"  # your saved scaler file
+SCALER_FILE = "models/scaler.pkl"  # your saved scaler file
 
 MODEL_FILES = {
-    "XGBoost": "xgboost_model.joblib",
-    "LSTM": "best_lstm_model.keras",
-    "GRU": "best_gru_model.keras",
-    "MHA": "best_mha_model.keras",
-    "LinearRegression": "linear_regression_model.joblib",
-    "LogisticRegression": "logistic_regression_model.joblib",
-    "RandomForest": "random_forest_model.joblib",
-    "KNN": "k_nearest_neighbors_model.joblib"
+    "XGBoost": "models/xgboost_model.joblib",
+    "LSTM": "models/best_lstm_model.keras",
+    "GRU": "models/best_gru_model.keras",
+    "MHA": "models/best_mha_model.keras",
+    "LinearRegression": "models/linear_regression_model.joblib",
+    "LogisticRegression": "models/logistic_regression_model.joblib",
+    "RandomForest": "models/random_forest_model.joblib",
+    "KNN": "models/k_nearest_neighbors_model.joblib"
 }
 
 FULL_FEATURES = [
