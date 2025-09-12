@@ -177,4 +177,3 @@ Default: [http://localhost:8501](http://localhost:8501)
 
 ---
 
-Would you like me to **include a small “Quick Demo GIF section”** (with example code snippet for generating GIFs/screenshots) in the README, so people can visualize the Streamlit app steps directly?
