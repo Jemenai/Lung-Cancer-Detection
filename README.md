@@ -61,24 +61,28 @@ The assessment adopts a **multi-model ensemble approach** because:
 <p align="center">
    <img src="assets/login_demo.gif" alt="Login Demo" width="600"/>
 </p>
+
 * **Patient Questionnaire**: Input health indicators (e.g., age, smoking, oxygen saturation, family history).
 <p align="center">
    <img src="assets/questionnaire_demo.gif" alt="Questionnaire" width="600"/>
 </p>
+
 * **Multi-Model Predictions**:
 
   * Run predictions with **all models** or a **selected algorithm**.
 <p align="center">
   <img src="assets/results_demo.gif" alt="Prediction Results" width="600"/>
 </p>
+
   * Display accuracy benchmarks for transparency.
   * Consensus voting when multiple models are selected.
+  
 * **History Tracking**:
-
   * Users can view, expand, and delete their own past prediction records.
   * Predictions are timestamped and saved with input features.
 * **Profile Management**: Update personal details such as age.
 * **Admin Dashboard**: Manage all users’ prediction history.
+
 <p align="center">
   <img src="assets/admin_demo.gif" alt="Admin Dashboard" width="600"/>
 </p>
