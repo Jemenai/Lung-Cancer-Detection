@@ -226,7 +226,7 @@ def preprocess_input(inputs):
     arr_full = arr_full.reshape(1, -1)
 
     # Step 3: Scale with saved scaler (trained on all 24 features)
-    scaler = joblib.load("scaler.pkl")
+    scaler = joblib.load(SCALER_FILE)
     arr_scaled = scaler.transform(arr_full)
 
     # Step 4: Select only the features you want to pass to the model

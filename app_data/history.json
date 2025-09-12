@@ -337,5 +337,32 @@
         "raw": 1.0
       }
     }
+  },
+  {
+    "timestamp": "2025-09-12 10:45:24",
+    "user": "user@user.com",
+    "inputs": {
+      "SMOKING": 0,
+      "BREATHING_ISSUE": 0,
+      "FAMILY_HISTORY_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_x_SMOKING_FAMILY_HISTORY": 0,
+      "SMOKING_FAMILY_HISTORY": 0,
+      "THROAT_DISCOMFORT": 0,
+      "ENERGY_LEVEL": 0,
+      "STRESS_IMMUNE_x_MENTAL_STRESS": 0,
+      "STRESS_IMMUNE": 0,
+      "IMMUNE_WEAKNESS_x_STRESS_IMMUNE": 0,
+      "FAMILY_HISTORY": 0,
+      "IMMUNE_WEAKNESS": 0,
+      "EXPOSURE_TO_POLLUTION": 0,
+      "OXYGEN_SATURATION": 0,
+      "AGE": 0
+    },
+    "predictions": {
+      "GRU": {
+        "class": 0,
+        "raw": 0.05137137323617935
+      }
+    }
   }
 ]
