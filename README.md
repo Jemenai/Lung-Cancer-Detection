@@ -58,7 +58,7 @@ The assessment adopts a **multi-model ensemble approach** because:
 ### Features
 
 * **User Authentication**: Register/login to access personal dashboard.
-![Login Demo](assets/login_demo.gif)
+<img src="assets/login_demo.gif" alt="Login Demo" width="400"/>
 * **Patient Questionnaire**: Input health indicators (e.g., age, smoking, oxygen saturation, family history).
 ![Questionnaire](assets/questionnaire_demo.gif)
 * **Multi-Model Predictions**:
