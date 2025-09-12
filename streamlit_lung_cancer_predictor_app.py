@@ -14,7 +14,7 @@ from datetime import datetime
 DATA_DIR = "app_data"
 USERS_FILE = os.path.join(DATA_DIR, "users.json")
 HISTORY_FILE = os.path.join(DATA_DIR, "history.json")
-SCALER_FILE = "scaler.pkl"  # your saved scaler file
+SCALER_FILE = "models/scaler.pkl"  # your saved scaler file
 
 MODEL_FILES = {
     "XGBoost": "models/xgboost_model.joblib",
